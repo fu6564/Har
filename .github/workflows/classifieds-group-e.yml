@@ -1,8 +1,10 @@
-name: Classifieds Enrichment - Group B
+name: Classifieds Enrichment - Group E
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  workflow_run:
+    workflows: ["Classifieds Enrichment - Group D"]
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       date:
@@ -16,8 +18,8 @@ permissions:
 env:
   PYTHON_VERSION: "3.12"
   BATCH_SIZE: "15"
-  GROUP_NAME: "classified-b"
-  CATEGORIES: "business-industrial,home-appliances,furniture-home-garden,office-furniture-equipment"
+  GROUP_NAME: "classified-e"
+  CATEGORIES: "books,music,dvds-movies,free-stuff,lostfound"
 
 jobs:
   prepare:
