@@ -19,7 +19,7 @@ env:
   PYTHON_VERSION: "3.12"
   BATCH_SIZE: "15"
   GROUP_NAME: "classified-d"
-  CATEGORIES: "collectibles,tickets-vouchers,sports-equipment,pets,musical-instruments"
+  CATEGORIES: "collectibles,tickets-vouchers,sports-equipment,pets,musical-instruments,free-stuff,lostfound"
 
 jobs:
   prepare:
